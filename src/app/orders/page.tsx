@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { useAuth } from "@/context/AuthContext";
 import { PAYMENT_NOTICE } from "@/lib/constants";

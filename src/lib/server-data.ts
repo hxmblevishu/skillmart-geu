@@ -5,9 +5,12 @@ import type { UserProfile } from "@/types/models";
 
 export async function getFeaturedSellers(n: number): Promise<UserProfile[]> {
   if (!isFirebaseConfigured()) return [];
+
   try {
-    return await featuredSellers(n);
-  } catch {
+    const data = await featuredSellers(n);
+    return data ?? [];
+  } catch (e) {
+    console.error("Error fetching featured sellers:", e);
     return [];
   }
 }

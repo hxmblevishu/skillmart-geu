@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 import { FeaturedSellersSection } from "@/components/landing/FeaturedSellersSection";
 import {
